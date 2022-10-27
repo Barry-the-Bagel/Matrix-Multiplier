@@ -21,9 +21,9 @@ public class CIS260_York_Homework8_and_9_Question1 {
 
 
         // Create matrices
-        int[][] matrix1 = new int[row][col];
-        int[][] matrix2 = new int[row][col];
-        int[][] matrix3 = new int[row][col];
+        double[][] matrix1 = new double[row][col];
+        double[][] matrix2 = new double[row][col];
+        double[][] matrix3 = new double[row][col];
 
 
         // User input for matrix values
@@ -33,13 +33,13 @@ public class CIS260_York_Homework8_and_9_Question1 {
         // Add values to matrix1
         for (int i = 0; i < col; i++) {
             for (int j = 0; j < row; j++) {
-                matrix1[i][j] = input.nextInt();
+                matrix1[i][j] = input.nextDouble();
             }
         }
          // Add values to matrix2
         for (int i = 0; i < col; i++) {
             for (int j = 0; j < row; j++) {
-                matrix2[i][j] = input.nextInt();
+                matrix2[i][j] = input.nextDouble();
                 
                 // multiply matrix 1 and 2
                 matrix3[i][j] = matrix1[i][j] * matrix2[i][j];
@@ -50,14 +50,7 @@ public class CIS260_York_Homework8_and_9_Question1 {
          // Print matrix3
          for (int i = 0; i < col; i++) {
              for (int j = 0; j < row; j++) {
-                System.out.print(
-                                    matrix1[0][i] + " " + matrix1[0][j+1] + " " + matrix1[0][j+2] + " "
-                                    + " * " +
-                                    matrix2[1][j] + " " + matrix2[1][j+1] + " " + matrix2[1][j+2] + " "
-                                    + " = " +
-                                    matrix3[2][j] + " " + matrix3[2][j+1] + " " + matrix3[2][j+2] + " "
-                                );
-                break;
+                System.out.printf("%5.1f", matrix3[i][j]);
              }
              System.out.println();
          }
